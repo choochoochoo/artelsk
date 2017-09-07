@@ -1,5 +1,6 @@
 process.env.NODE_ENV = 'production';
 var fs = require('fs'),
+     fsExtra = require('fs-extra'),
     mkdirp = require('mkdirp'),
     // page = require('./dev/bundleStaticPage.js'),
     webpack = require('webpack'),
@@ -8,31 +9,19 @@ var fs = require('fs'),
 
 
 webpack(config, function (err, stats) {
-
     if (err) {
-
         console.log(err);
-
     } else {
-
-        // var assets = 'public/assets';
-        // mkdirp.sync(assets);
-        //
-        // fs.writeFileSync(assets + '/style.css', fs.readFileSync('elements/style.css'));
-
-
-        //  fs.writeFileSync('public/index1.html', page());
-
-
         var page = require('../temp/bundleStaticPage.js');
-
 
         fs.readFile('src/index.html', 'utf8', (readFileError, dataFile) => {
             if (readFileError) {
                 return console.log(readFileError);
             }
 
-            let data = dataFile.replace('<div id=\'root\'></div>', page())
+            let data =
+                dataFile.replace('<div id=\'root\'></div>', page())
+                        .replace('<script src="js/bundle.js"></script>', '')
 
             var minify = require('html-minifier').minify
 
@@ -69,8 +58,10 @@ webpack(config, function (err, stats) {
 
             mkdirp.sync('public');
             fs.writeFileSync('public/index.html', result)
-        });
 
+            mkdirp.sync('public/css');
+            fsExtra.copySync('temp/css/styles.css', 'public/css/styles.css' )
+        });
 
     }
 

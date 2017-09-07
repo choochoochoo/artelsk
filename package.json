@@ -32,7 +32,11 @@
     "copy-webpack-plugin": "~4.0.1",
     "css-loader": "~0.28.0",
     "eslint-import-resolver-webpack": "^0.8.3",
+    "extract-text-webpack-plugin": "~3.0.0",
+    "fs-extra": "~4.0.1",
+    "html-minifier": "~3.5.3",
     "json-loader": "~0.5.4",
+    "mkdirp": "~0.5.1",
     "postcss-color-function": "~4.0.0",
     "postcss-custom-properties": "~6.1.0",
     "postcss-for": "~2.1.1",
@@ -45,9 +49,7 @@
     "style-loader": "~0.18.2",
     "svg-inline-loader": "^0.7.1",
     "webpack": "~3.2.0",
-    "webpack-dev-server": "~2.5.1",
-    "html-minifier": "~3.5.3",
-    "mkdirp": "~0.5.1"
+    "webpack-dev-server": "~2.5.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

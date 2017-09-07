@@ -2,6 +2,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const fs = require('fs')
 const path = require('path')
 const webpack = require('webpack')
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const localNodeModules = path.resolve(__dirname, 'node_modules') + path.sep
 
@@ -51,6 +52,58 @@ const output = isDevelopment ?
 
 }
 
+const cssLoader = isDevelopment ?
+
+    {
+        test: /\.css$/,
+        use: [
+            getModule('style-loader'),
+            {
+                loader: getModule('css-loader'),
+                options: {
+                    modules: true,
+                    importLoaders: 1,
+                    camelCase: true,
+                    localIdentName: isDevelopment ? '[path][name]--[local]--[hash:base64:5]' : '[hash:base64:8]'
+                }
+            },
+            {
+                loader: getModule('postcss-loader'),
+                options: {
+                    plugins: [
+                        require(getModule('postcss-import')),
+                        require(getModule('postcss-for')),
+                        require(getModule('postcss-simple-vars')),
+                        require(getModule('postcss-custom-properties')),
+                        require(getModule('postcss-nested')),
+                        require(getModule('postcss-color-function')),
+                        require(getModule('autoprefixer'))({
+                            browsers: ['last 2 versions', 'ie >= 9']
+                        })
+                    ]
+                }
+            }
+        ]
+    }
+    :
+    {
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+            fallback: 'style-loader',
+            use: [
+                {
+                    loader: 'css-loader',
+                    options: {
+                        importLoaders: 1,
+                        modules: true,
+                        localIdentName: '[hash:base64:8]',
+                        minimize: true,
+                    }
+                },
+            ]
+        })
+    }
+
 module.exports = {
     entry: entry,
     target: isDevelopment ? 'web' : 'node',
@@ -70,38 +123,7 @@ module.exports = {
                 loader: getModule('babel-loader'),
                 options: babelOptions
             },
-            {
-                test: /\.css$/,
-                exclude: /\.config.css$/,
-                use: [
-                    getModule('style-loader'),
-                    {
-                        loader: getModule('css-loader'),
-                        options: {
-                            modules: true,
-                            importLoaders: 1,
-                            camelCase: true,
-                            localIdentName: isDevelopment ? '[path][name]--[local]--[hash:base64:5]' : '[hash:base64:8]'
-                        }
-                    },
-                    {
-                        loader: getModule('postcss-loader'),
-                        options: {
-                            plugins: [
-                                require(getModule('postcss-import')),
-                                require(getModule('postcss-for')),
-                                require(getModule('postcss-simple-vars')),
-                                require(getModule('postcss-custom-properties')),
-                                require(getModule('postcss-nested')),
-                                require(getModule('postcss-color-function')),
-                                require(getModule('autoprefixer'))({
-                                    browsers: ['last 2 versions', 'ie >= 9']
-                                })
-                            ]
-                        }
-                    }
-                ]
-            },
+            cssLoader,
             {
                 test: /\.svg$/,
                 loader: getModule('svg-inline-loader'),
@@ -137,7 +159,6 @@ module.exports = {
         .if(isDevelopment,
             [
                 new webpack.SourceMapDevToolPlugin(),
-                // new webpack.HotModuleReplacementPlugin(),
                 new webpack.NamedModulesPlugin()
             ]
         )
@@ -149,6 +170,9 @@ module.exports = {
                     dead_code: true // eslint-disable-line camelcase
                 }
             })
+        )
+        .if(!isDevelopment,
+            new ExtractTextPlugin('css/styles.css')
         )
         .list,
 };
