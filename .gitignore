@@ -1,0 +1,22 @@
+/npm-debug.log*
+/node_modules/*
+/target
+
+# resources
+/public
+/temp
+
+# Vendor dll build
+dlls
+
+# User-specific stuff for intellij idea:
+# see https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+.idea/workspace.xml
+.idea/jsLinters/eslint.xml
+.idea/eslintPlugin.xml
+.idea/compiler.xml
+.idea/dictionaries
+.idea
+
+package-lock.json
+
