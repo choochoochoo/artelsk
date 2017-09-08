@@ -1,9 +1,10 @@
 import React from 'react';
 import {ServicePanel} from '../ServicePanel'
 import {services} from "../../../data/services";
+import styles from './App.css'
 
 export const App = () => (
-    <div>
+    <div className={`${styles.app}`}>
         {
             services.map((item) => {
                 return <ServicePanel

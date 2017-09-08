@@ -6,7 +6,7 @@ export const services = [
             {
                 id: 1,
                 name: 'Ремонт телефонов и ноутбуков',
-                icon: 'repair-computers.png',
+                icon: 'computers.png',
             },
             {
                 id: 2,

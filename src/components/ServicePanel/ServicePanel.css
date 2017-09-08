@@ -1,3 +1,39 @@
 .root {
-    color: red;
+    width: 100%;
+}
+
+.panel {
+    background-color: #eaf0ec;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.item {
+    width: 380px;
+    margin: auto;
+    padding-left: 40px;
+}
+
+.title {
+    position: absolute;
+    top: 0;
+    right: 127px;
+}
+
+.logoCol {
+    display: table;
+    width: 380px;
+    margin: auto;
+    position: relative;
+}
+
+.logo {
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-image: url(./logo/logo.png);
+    margin: 0 auto;
+    display: inline-block;
+    height: 70px;
+    width: 200px;
 }
