@@ -1,10 +1,16 @@
 import React from 'react';
 import {ServicePanel} from '../ServicePanel'
+import {Contacts} from '../Contacts'
 import {services} from "../../../data/services";
+import {contacts} from "../../../data/contacts";
 import styles from './App.css'
 
 export const App = () => (
     <div className={`${styles.app}`}>
+        <Contacts
+            title='Контакты'
+            contacts={contacts}
+        />
         {
             services.map((item) => {
                 return <ServicePanel

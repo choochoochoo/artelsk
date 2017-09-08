@@ -6,23 +6,27 @@
     background-color: #eaf0ec;
     height: 80px;
     margin-bottom: 10px;
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .item {
     width: 380px;
+    min-width: 320px;
     margin: auto;
-    padding-left: 40px;
+    padding-left: 60px;
 }
 
 .title {
     position: absolute;
-    top: 0;
-    right: 127px;
+    top: 15px;
+    left: 192px;
+    font-size: 20px;
 }
 
 .logoCol {
     display: table;
     width: 380px;
+    min-width: 320px;
     margin: auto;
     position: relative;
 }

@@ -1,0 +1,14 @@
+.item {
+    display: table;
+    margin-bottom: 10px;
+}
+
+.icon {
+    display: table-cell;
+    padding-right: 10px;
+}
+
+.title {
+    display: table-cell;
+    vertical-align: middle;
+}

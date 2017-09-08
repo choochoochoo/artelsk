@@ -5,15 +5,14 @@ import styles from './ServicePanel.css'
 export const ServicePanel = (props) => (
     <div className={styles.root}>
         <div className={styles.panel}>
-
-                <div className={styles.logoCol}>
+            <div className={styles.logoCol}>
+                <a href='https://www.artelsk.ru'>
                     <div className={styles.logo}/>
                     <div className={styles.title}>
                         {props.title}
                     </div>
-                </div>
-
-
+                </a>
+            </div>
         </div>
         <div className={styles.item}>
             {
