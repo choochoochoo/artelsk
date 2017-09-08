@@ -114,7 +114,6 @@ module.exports = {
                 test: /\.config.css$/,
                 use: [
                     getModule('babel-loader'),
-                    getModule('postcss-variables-loader-sbtsbol'),
                 ]
             },
             {
