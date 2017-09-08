@@ -1,8 +1,9 @@
-import React, { PropTypes } from 'react'
+import React, {PropTypes} from 'react'
+import {Icon} from '../Icon'
 
 export const ServiceItem = (props) => (
     <div>
-        <div>{props.icon}</div>
+        <Icon name={props.icon}/>
         <div>{props.name}</div>
     </div>
 )

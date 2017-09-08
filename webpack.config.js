@@ -119,7 +119,7 @@ module.exports = {
             },
             {
                 test: /\.jsx?$/,
-                exclude: [/\.spec\.jsx?$/, /node_modules[\\\/](?!((sbtsbol-|sbol-|@sbtsbol|@sbol).*)[\\\/]).*/],
+                exclude: [/node_modules/],
                 loader: getModule('babel-loader'),
                 options: babelOptions
             },
@@ -143,7 +143,7 @@ module.exports = {
                 test: /\.(?:jpg|png|gif)$/,
                 loader: getModule('file-loader'),
                 options: {
-                    name: 'img/[name]--[hash:base64:5].[ext]'
+                    name: 'img/[hash:base64:5].[ext]'
                 }
             },
         ]

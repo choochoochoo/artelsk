@@ -5,11 +5,13 @@ export const services = [
         services: [
             {
                 id: 1,
-                name: 'Ремонт телефонов и ноутбуков'
+                name: 'Ремонт телефонов и ноутбуков',
+                icon: 'repair-computers.png',
             },
             {
                 id: 2,
-                name: 'Изготовление ключей'
+                name: 'Изготовление ключей',
+                icon: 'photo.png'
             },
             {
                 id: 3,
