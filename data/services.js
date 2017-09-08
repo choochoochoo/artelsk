@@ -11,11 +11,12 @@ export const services = [
             {
                 id: 2,
                 name: 'Изготовление ключей',
-                icon: 'photo.png'
+                icon: 'key.png',
             },
             {
                 id: 3,
-                name: 'Ремонт и замена батареек в часах'
+                name: 'Ремонт и замена батареек в часах',
+                icon: 'clock.png',
             },
         ]
     },
@@ -25,15 +26,18 @@ export const services = [
         services: [
             {
                 id: 1,
-                name: 'Фото на документы'
+                name: 'Фото на документы',
+                icon: 'photo-on-stick.png'
             },
             {
                 id: 2,
-                name: 'Фотосессия в горах'
+                name: 'Фотосессия в горах',
+                icon: 'mountains.png',
             },
             {
                 id: 3,
-                name: 'Свадебные фотосессии'
+                name: 'Свадебные фотосессии',
+                icon: 'dance.png',
             },
         ]
     },
@@ -43,15 +47,18 @@ export const services = [
         services: [
             {
                 id: 1,
-                name: 'Прокат GoPro'
+                name: 'Прокат GoPro',
+                icon: 'photo.png',
             },
             {
                 id: 2,
-                name: 'Прокат квадракоптеров'
+                name: 'Прокат квадракоптеров',
+                icon: 'spinner.png',
             },
             {
                 id: 3,
-                name: 'Прокат PS3'
+                name: 'Прокат PS3',
+                icon: 'ps3.png',
             },
         ]
     },
@@ -61,19 +68,23 @@ export const services = [
         services: [
             {
                 id: 1,
-                name: 'Фотопечать'
+                name: 'Фотопечать',
+                icon: 'image.png',
             },
             {
                 id: 2,
-                name: 'Копирование'
+                name: 'Копирование',
+                icon: 'copy.png'
             },
             {
                 id: 3,
-                name: 'Сканирование'
+                name: 'Сканирование',
+                icon: 'scanner.png',
             },
             {
                 id: 4,
-                name: 'Ламинирование'
+                name: 'Ламинирование',
+                icon: 'mfu.png'
             },
         ]
     },
