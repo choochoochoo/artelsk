@@ -1,11 +1,5 @@
 .root {
     margin-left: -20px;
     margin-bottom: 10px;
-    iframe{
-        border-width: 0;
-        border-style: initial;
-        border-color: initial;
-        border-image: initial;
-    }
 }
 

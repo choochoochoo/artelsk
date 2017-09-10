@@ -1,6 +1,9 @@
+@import 'reset-css/reset.css';
+
 .app {
     margin: 0 auto;
     width: 320px;
+    font-family: 'Fira Sans Condensed', sans-serif;
 }
 
 .content{
@@ -9,17 +12,8 @@
 
 .title{
     margin-top: 10px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
-:global {
-    body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        font-family: 'Fira Sans Condensed', sans-serif;
-    }
-    a:link, a:visited {
-        color: black;
-    }
-}
+/*red #bf0000*/

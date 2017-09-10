@@ -31,7 +31,7 @@ const entry  = isDevelopment ? [
 }
 
 var outputPath = __dirname + '/temp',
-    outputPublicPath =  'http://localhost:3000/scripts/';
+    outputPublicPath =  '';
 
 const output = isDevelopment ?
     {
@@ -53,7 +53,6 @@ const output = isDevelopment ?
 }
 
 const cssLoader = isDevelopment ?
-
     {
         test: /\.css$/,
         use: [
@@ -64,7 +63,7 @@ const cssLoader = isDevelopment ?
                     modules: true,
                     importLoaders: 1,
                     camelCase: true,
-                    localIdentName: isDevelopment ? '[path][name]--[local]--[hash:base64:5]' : '[hash:base64:8]'
+                    localIdentName: '[path][name]--[local]--[hash:base64:5]'
                 }
             },
             {

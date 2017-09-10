@@ -1,12 +1,12 @@
 .root {
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .logo {
     background-size: cover;
     background-position: 50%;
     background-repeat: no-repeat;
-    background-image: url(./logo/logo.png);
     margin: 0 auto;
     display: inline-block;
     height: 70px;

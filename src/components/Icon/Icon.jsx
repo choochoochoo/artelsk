@@ -2,7 +2,6 @@ import React, {PropTypes} from 'react'
 import styles from './Icon.css'
 
 export const Icon = (props) => {
-
     const imageRrc = require(`./icons/${props.name ? props.name : 'dart.png' }`)
 
     const iconStyle = {

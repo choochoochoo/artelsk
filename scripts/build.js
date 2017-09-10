@@ -1,11 +1,10 @@
 process.env.NODE_ENV = 'production';
 var fs = require('fs'),
-     fsExtra = require('fs-extra'),
+    fsExtra = require('fs-extra'),
     mkdirp = require('mkdirp'),
     // page = require('./dev/bundleStaticPage.js'),
     webpack = require('webpack'),
     config = require('../webpack.config');
-
 
 
 webpack(config, function (err, stats) {
@@ -21,7 +20,7 @@ webpack(config, function (err, stats) {
 
             let data =
                 dataFile.replace('<div id=\'root\'></div>', page())
-                        .replace('<script src="js/bundle.js"></script>', '')
+                    .replace('<script src="js/bundle.js"></script>', '')
 
             var minify = require('html-minifier').minify
 
@@ -60,7 +59,12 @@ webpack(config, function (err, stats) {
             fs.writeFileSync('public/index.html', result)
 
             mkdirp.sync('public/css');
-            fsExtra.copySync('temp/css/styles.css', 'public/css/styles.css' )
+            fsExtra.copySync('temp/css/styles.css', 'public/css/styles.css')
+
+            mkdirp.sync('public/img');
+            fsExtra.copySync('temp/img', 'public/img')
+
+            fsExtra.copySync('resources/favicon.ico', 'public/favicon.ico')
         });
 
     }
