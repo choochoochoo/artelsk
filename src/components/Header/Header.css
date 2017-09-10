@@ -1,0 +1,14 @@
+.root {
+    width: 100%;
+}
+
+.logo {
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-image: url(./logo/logo.png);
+    margin: 0 auto;
+    display: inline-block;
+    height: 70px;
+    width: 320px;
+}
