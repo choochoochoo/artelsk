@@ -10,7 +10,7 @@ export const services = [
             },
             {
                 id: 2,
-                name: 'Изготовление ключей',
+                name: '',
                 icon: 'key.png',
             },
             {
