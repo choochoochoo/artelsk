@@ -24,7 +24,7 @@ export const ServicePanel = (props) => (
 ServicePanel.propTypes = {
     id: PropTypes.number,
     title: PropTypes.string,
-    services: PropTypes.arrayOf(PropTypes.object)
+    services: PropTypes.arrayOf(PropTypes.object),
 }
 
 ServicePanel.defaultProps = {

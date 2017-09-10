@@ -1,6 +1,10 @@
 .item {
     display: table;
     margin-bottom: 10px;
+    a {
+        color: black;
+        text-decoration: initial;
+    }
 }
 
 .icon {

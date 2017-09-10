@@ -9,12 +9,13 @@ export const Contacts = (props) => (
         </div>
         <div className={styles.items}>
             {
-                Object.keys(props.contacts).map((item) => {
-                    const value = props.contacts[item]
+                props.contacts.map((item) => {
                     return <ContactItem
-                        key={item}
-                        name={item}
-                        value={value}
+                        key={item.id}
+                        link={item.link}
+                        value={item.value}
+                        icon={item.icon}
+                        target={item.target}
                     />
                 })
             }
@@ -24,10 +25,10 @@ export const Contacts = (props) => (
 
 Contacts.propTypes = {
     title: PropTypes.string,
-    contacts: PropTypes.object,
+    contacts: PropTypes.arrayOf(PropTypes.object),
 }
 
 Contacts.defaultProps = {
     title: '',
-    contacts: {},
+    contacts: [],
 }

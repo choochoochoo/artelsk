@@ -4,19 +4,27 @@ import styles from './ContactItem.css'
 
 export const ContactItem = (props) => (
     <div className={styles.item}>
-        <div className={styles.icon}>
-            <Icon name={`${props.name}.png`}/>
-        </div>
-        <div className={styles.title}>{props.value}</div>
+        <a href={props.link} target={props.target}>
+            <div className={styles.icon}>
+                <Icon name={props.icon}/>
+            </div>
+            <div className={styles.title}>
+                {props.value}
+            </div>
+        </a>
     </div>
 )
 
 ContactItem.propTypes = {
-    name: PropTypes.string,
+    link: PropTypes.string,
     value: PropTypes.string,
+    icon: PropTypes.string,
+    target: PropTypes.string,
 }
 
 ContactItem.defaultProps = {
-    name: '',
+    link: '',
     value: '',
+    icon: '',
+    target: '',
 }
