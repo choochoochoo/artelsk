@@ -36,7 +36,7 @@ export const services = [
             },
             {
                 id: 3,
-                name: 'Свадебные фотосессии',
+                name: 'Свадебные фотосессии в горах',
                 icon: 'dance.png',
             },
         ]
