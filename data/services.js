@@ -31,12 +31,12 @@ export const services = [
             },
             {
                 id: 2,
-                name: 'Фотосессия в горах',
+                name: 'Фотосессии в горах',
                 icon: 'mountains.png',
             },
             {
                 id: 3,
-                name: 'Свадебные фотосессии в горах',
+                name: 'Свадебные фотосессии',
                 icon: 'dance.png',
             },
         ]
