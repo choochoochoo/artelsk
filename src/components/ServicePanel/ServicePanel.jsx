@@ -4,11 +4,9 @@ import styles from './ServicePanel.css'
 
 export const ServicePanel = (props) => (
     <div className={styles.root}>
-
-            <div className={styles.title}>
-                {props.title}
-            </div>
-
+        <div className={styles.title}>
+            {props.title}
+        </div>
         <div className={styles.item}>
             {
                 props.services.map((item) => {
