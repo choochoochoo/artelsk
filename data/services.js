@@ -57,7 +57,7 @@ export const services = [
             },
             {
                 id: 3,
-                name: 'Прокат PS3',
+                name: 'Прокат PS3, PS4',
                 icon: 'ps3.png',
             },
         ]

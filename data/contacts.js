@@ -1,8 +1,8 @@
 export const contacts = [
     {
         id: 1,
-        link: 'tel:+7 988 989 13 97',
-        value: '+7 988 989 13 97',
+        link: 'tel:+7 928 446 23 11',
+        value: '+7 928 446 23 11',
         icon: 'phone.png',
         target: '_self',
     },
