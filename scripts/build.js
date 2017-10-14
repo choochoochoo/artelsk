@@ -64,7 +64,7 @@ webpack(config, function (err, stats) {
             mkdirp.sync('public/img');
             fsExtra.copySync('temp/img', 'public/img')
 
-            fsExtra.copySync('resources/favicon.ico', 'public/favicon.ico')
+            fsExtra.copySync('resources/favicon/favicon.ico', 'public/favicon.ico')
         });
 
     }

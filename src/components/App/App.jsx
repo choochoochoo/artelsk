@@ -10,6 +10,9 @@ import styles from './App.css'
 export const App = () => (
     <div className={styles.app}>
         <Header/>
+        <h1 className={styles.headerTitle}>
+            Мы предоставляем качественые экспресс услуги ремонта телефонов и ноутбуков, изготовления ключей, печати и проката в Красной Поляне и Розе Хутор.
+        </h1>
         <div className={styles.content}>
             <Contacts
                 title='Контакты'
