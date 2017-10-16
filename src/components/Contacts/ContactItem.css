@@ -4,8 +4,12 @@
 }
 
 .link {
-    color: black;
+    color: #bf0000;
     text-decoration: initial;
+}
+
+.link:hover {
+    text-decoration: underline;
 }
 
 .icon {

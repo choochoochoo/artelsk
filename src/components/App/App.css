@@ -21,4 +21,13 @@
     margin-bottom: 10px;
 }
 
+.link {
+    color: #bf0000;
+    text-decoration: initial;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
 /*red #bf0000*/

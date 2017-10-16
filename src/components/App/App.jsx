@@ -11,7 +11,15 @@ export const App = () => (
     <div className={styles.app}>
         <Header/>
         <h1 className={styles.headerTitle}>
-            Мы предоставляем качественые экспресс услуги ремонта телефонов и ноутбуков, изготовления ключей, печати и проката в Красной Поляне и Розе Хутор.
+            Мы предоставляем качественые экспресс услуги ремонта телефонов и ноутбуков, изготовления ключей, печати, проката а так же услуги
+            <a
+                href="https://www.vladimirkosolapov.com/"
+                target="_blank"
+                className={styles.link}
+            >
+                &nbsp;фотографа&nbsp;
+            </a>
+            в Красной Поляне и Розе Хутор.
         </h1>
         <div className={styles.content}>
             <Contacts
