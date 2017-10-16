@@ -65,6 +65,8 @@ webpack(config, function (err, stats) {
             fsExtra.copySync('temp/img', 'public/img')
 
             fsExtra.copySync('resources/favicon/favicon.ico', 'public/favicon.ico')
+
+            fsExtra.copySync('resources/robots.txt', 'public/robots.txt')
         });
 
     }
