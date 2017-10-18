@@ -22,12 +22,13 @@
 }
 
 .link {
-    color: #bf0000;
-    text-decoration: initial;
+    color: #670000;
+    text-decoration-color: #670000;
+    text-decoration-style: dotted;
 }
 
 .link:hover {
-    text-decoration: underline;
+    text-decoration: initial;
 }
 
 /*red #bf0000*/
